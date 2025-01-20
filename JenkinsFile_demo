@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building New Feature'
+            }
+        }
+
+        stage('Dev') {
+            steps {
+                echo 'Develop Branch Unit Test'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Functional Test, Integration Test and Acceptance Test'
+            }
+        }
+
+        stage('Release') {
+            steps {
+                echo 'Delivery and Deployment'
+            }
+        }
+    }
+}
