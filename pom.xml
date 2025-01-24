@@ -40,6 +40,12 @@
 		      <suiteXmlFiles>
 		       <suiteXmlFile>${SuiteName}</suiteXmlFile>
 		      </suiteXmlFiles>
+		      
+		      <systemPropertyVariables>
+				  <Reg_Tester_Name>${Reg_Tester_Name}</Reg_Tester_Name>
+				  <Smoke_Tester_Name>${Smoke_Tester_Name}</Smoke_Tester_Name>
+			  </systemPropertyVariables>
+		      
 		     </configuration>
 		  </plugin>
       </plugins>

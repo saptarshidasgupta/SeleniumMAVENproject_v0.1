@@ -21,7 +21,7 @@ public class Smoke_execution {
 		prop.load(fis);
 		
 		String SuiteName = prop.getProperty("SmokeSuite");
-		String SuiteTesterName = prop.getProperty("SmokeSuite_Tester");
+		String SuiteTesterName = System.getProperty("Smoke_Tester_Name");
 		
 		System.out.println("=======================================================");    
 		System.out.println("Smoke Suite Execution initiated");

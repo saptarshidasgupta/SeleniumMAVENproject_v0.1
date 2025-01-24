@@ -21,7 +21,7 @@ public class Reg_execution {
 		prop.load(fis);
 		
 		String SuiteName = prop.getProperty("RegSuite");
-		String SuiteTesterName = prop.getProperty("RegSuite_Tester");
+		String SuiteTesterName = System.getProperty("Reg_Tester_Name");
 		
 		    System.out.println("=======================================================");
 		    System.out.println("Regression Suite Execution initiated");
