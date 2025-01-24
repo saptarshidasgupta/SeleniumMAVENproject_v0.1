@@ -10,6 +10,9 @@ public class ExecutionDemo {
 	@Test
 	@Parameters({"URL","Count"})
 	public void ExecuteBrowserURL(String URL, int Count) throws InterruptedException {
+		
+		
+		System.out.println("Executing testng.xml");
 	        //Launch Browser
 			WebDriver driver = new ChromeDriver();
 			
