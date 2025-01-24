@@ -6,9 +6,19 @@
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <RegSuite_Tester>RegTester_Name</RegSuite_Tester>
+    <SmokeSuite_Tester>SmokeTester_Name</SmokeSuite_Tester>
+    <SuiteName>testng.xml</SuiteName>
   </properties>
   
   <build>
+	  
+	  <testResources>
+		  <testResource>
+			  <directory>src/test/java/resources</directory>
+			  <filtering>true</filtering>
+		  </testResource>
+	  </testResources>
   
   <pluginManagement>
       <plugins>
@@ -28,7 +38,7 @@
 		     <version>3.3.0</version>
 		     <configuration>
 		      <suiteXmlFiles>
-		       <suiteXmlFile>testng.xml</suiteXmlFile>
+		       <suiteXmlFile>${SuiteName}</suiteXmlFile>
 		      </suiteXmlFiles>
 		     </configuration>
 		  </plugin>
