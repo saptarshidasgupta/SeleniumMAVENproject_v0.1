@@ -8,7 +8,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <RegSuite_Tester>RegTester_Name</RegSuite_Tester>
     <SmokeSuite_Tester>SmokeTester_Name</SmokeSuite_Tester>
-    <SuiteName>testng.xml</SuiteName>
+    
   </properties>
   
   <build>
