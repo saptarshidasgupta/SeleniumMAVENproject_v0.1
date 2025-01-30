@@ -1,6 +1,10 @@
 pipeline {
     agent any
-
+    parameters { 
+          choice{name: 'SuiteName', choices: ['Regression_TestNG.xml','Smoke_TestNG.xml'], description: ''}
+          string(name: 'Reg_Tester_Name', defaultValue: 'DefaultRegTester', description: '')
+          string(name: 'Smoke_Tester_Name', defaultValue: 'DefaultSmokeTester', description: '')
+    }
     stages {
         stage('Build') {
             steps {
@@ -17,6 +21,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Functional Test, Integration Test and Acceptance Test'
+                build job: 'GitHub_Maven_Project_v0.3', parameters: [string(name:'SuiteName', value:"${params.SuiteName}"),string(name:'Reg_Tester_Name', value:"${params.Reg_Tester_Name}"),string(name:'Smoke_Tester_Name', value:"${params.Smoke_Tester_Name}")]
             }
         }
 
