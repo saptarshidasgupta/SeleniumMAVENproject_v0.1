@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    parameters { choice{name: 'SuiteName', choices: ['Regression_TestNG.xml','Smoke_TestNG.xml'], description: ''}}
+    parameters { choice(name: 'SuiteName', choices: ['Regression_TestNG.xml','Smoke_TestNG.xml'], description: '')}
     parameters { string(name: 'Reg_Tester_Name', defaultValue: 'DefaultRegTester', description: '')}
     parameters { string(name: 'Smoke_Tester_Name', defaultValue: 'DefaultSmokeTester', description: '')}
     stages {
